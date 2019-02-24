@@ -60,7 +60,6 @@ df = pd.read_sql_table('InsertTableName', engine)
 # load model
 model = joblib.load("../models/model.pkl")
 
-
 # index webpage displays cool visuals and receives user input text for model
 @app.route('/')
 @app.route('/index')
@@ -126,7 +125,6 @@ def index():
     
     # render web page with plotly graphs
     return render_template('master.html', ids=ids, graphJSON=graphJSON)
-
 
 # web page that handles user query and displays model results
 @app.route('/go')
